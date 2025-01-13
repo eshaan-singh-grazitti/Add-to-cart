@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastry MAMA</title>
+    <link rel="stylesheet" href="./css/store.css">
+</head>
+
+<body>
+    <div id="a"></div>
+
+    <div class="navbar" >
+        <div class="logo-div">
+            <img src="./assets/images/logo.png" alt="" class="logo">
+        </div>
+        <div class="nav-content">
+            <!-- <a href="admin_page.html">Add Product</a>
+            <a href="manage_product.html">Manage products</a>
+            <a href="store.html" class="store-btn">Store</a> -->
+            <button class="log-out" onclick="logout()">Log Out</button>
+            <button class="button cart" onclick="showCart()">
+                <svg viewBox="0 0 16 16" class="bi bi-cart-check" height="24" width="24"
+                    xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                    <path
+                        d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z">
+                    </path>
+                    <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z">
+                    </path>
+                </svg>
+                <p class="text">Cart (<span id="cart-count">0</span>)</p>
+            </button>
+
+        </div>
+    </div>
+
+    <section class="hero-section">
+        <a href="#search-bar"><button class="explore">Explore</button></a>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./assets/images/bg1.jpg" alt="Delicious Cakes">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/images/bg2.jpg" alt="Fresh Cupcakes">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/images/bg3.jpg" alt="Sweet Pastries">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/images/bg4.jpg" alt="Tasty Doughnuts">
+                </div>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot" onclick="setSlide(0)"></span>
+                <span class="dot" onclick="setSlide(1)"></span>
+                <span class="dot" onclick="setSlide(2)"></span>
+                <span class="dot" onclick="setSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="intro">
+    <div class="intro-content">
+        <h1>Discover Our Store</h1>
+        <p>Welcome to our bakery, where passion meets creativity. Dive into our world of delightful treats, where
+            every bite is crafted with love and the finest ingredients.</p>
+        <div class="img-bakery">
+            <div class="img-div">
+                <img src="./assets/images/bakery-1.jpg" alt="Bakery Overview">
+            </div>
+
+            <div class="img-div">
+                <img src="./assets/images/bakery-2.jpg" alt="Bakery Overview">
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="about-us">
+        <div class="about-section">
+            <div class="image">
+                <img src="./assets/images/philosofy.webp" alt="Philosophy">
+            </div>
+            <div class="text">
+                <h2>Our Philosophy</h2>
+                <p>At our bakery, we believe in celebrating life's moments with exquisite flavors. Our dedication to
+                    quality and creativity is reflected in every product we offer.</p>
+            </div>
+        </div>
+
+        <div class="about-section reverse">
+            <div class="text">
+                <h2>Fresh Ingredients</h2>
+                <p>We source the finest ingredients to ensure that each product is fresh, flavorful, and delightful.
+                    Quality is our top priority in every recipe we create.</p>
+            </div>
+            <div class="image">
+                <img src="./assets/images/ingridients.avif" alt="Fresh Ingredients">
+            </div>
+        </div>
+
+        <div class="about-section">
+            <div class="image">
+                <img src="./assets/images/chefs.jpg" alt="Our Team">
+            </div>
+            <div class="text">
+                <h2>Our Team</h2>
+                <p>Meet the talented team behind our creations. Each member brings a unique touch and dedication to
+                    crafting the perfect treats for you to enjoy.</p>
+            </div>
+        </div>
+
+        <div class="about-section reverse">
+            <div class="text">
+                <h2>Community Support</h2>
+                <p>We believe in giving back to the community that supports us. Our bakery actively participates in
+                    local events and charitable activities.</p>
+            </div>
+            <div class="image">
+                <img src="./assets/images/events.webp" alt="Community Support">
+            </div>
+        </div>
+    </section>
+
+
+
+    </div>
+    <div id="search-bar">
+        <input type="text" id="search-input" placeholder="Search for items...">
+    </div>
+
+    <div id="filter-buttons">
+        <button onclick="filterItems('all')">All</button>
+        <button onclick="filterItems('cakes')">Cakes</button>
+        <button onclick="filterItems('cupcakes')">Cupcakes</button>
+        <button onclick="filterItems('sweet')">Sweet</button>
+        <button onclick="filterItems('doughnuts')">Doughnuts</button>
+    </div>
+    
+
+    <div id="items-container"></div>
+
+    <div class="cart-modal" id="cart-modal">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <div id="cart-total">
+            <a href="./payment.html"><button class="checkout-btn">Checkout</button></a>
+            <strong>Total: ₹<span id="total-price">0</span></strong>
+        </div>
+        <div class="close" onclick="closeCart()">Close</div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Logo Section -->
+            <div class="footer-logo">
+                <img src="./assets/images/logo.png" alt="Logo">
+            </div>
+
+            <!-- Contact Section -->
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Phone: +1 234 567 890</li>
+                    <li>Email: contact@bakery.com</li>
+                    <li>Address: 123 Bakery Lane, City, Country</li>
+                </ul>
+            </div>
+
+            <!-- About Us Section -->
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>We are a family-owned bakery that has been serving delicious treats since 1980. Visit us for freshly
+                    baked cakes, cupcakes, doughnuts, and more.</p>
+            </div>
+        </div>
+    </footer>
+    <button onclick="goToTop()" id="goTopBtn" class="go-top-btn">↑ Top</button>
+    <script src="./js/store.js"></script>
+
+</body>
+
+</html>

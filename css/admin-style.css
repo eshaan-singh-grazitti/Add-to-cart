@@ -1,0 +1,135 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #005f73;
+}
+
+h2 {
+    margin-top: 8vw;
+}
+
+form {
+    max-width: 534px;
+    min-width: 40%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+input, select {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+select {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #9b2226;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b03a3e;
+}
+
+.item-list {
+    max-width: 800px;
+    min-width: 60%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.item-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #e0fbfc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item-card img {
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.item-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-info strong {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333333;
+}
+
+.item-info span {
+    color: #555555;
+}
+
+.item-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.item-actions button {
+    background-color: #005f73;
+    padding: 10px 15px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.item-actions button:hover {
+    background-color: #0a9396;
+}
+
+.item-actions button img {
+    width: 16px;
+    height: 16px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Form</title>
+    <link rel="stylesheet" href="./css/demo-admin.css">
+    <style>
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+            /* Initially hide the error messages */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo-div">
+                <img src="./assets/images/logo.png" alt="" class="logo">
+            </div>
+            <div class="nav-content">
+                <a href="admin_page.html">Add Product</a>
+                <a href="manage_product.html">Manage products</a>
+                <a href="store.html" class="store-btn">Store</a>
+            </div>
+        </div>
+
+        <form id="item-form">
+            <h1 class="heading-h1">Add New Product</h1>
+            <div class="form-group">
+                <label for="name">Product Name</label>
+                <input type="text" id="name" required>
+                <p id="name-error" class="error-message">Name cannot be empty or just spaces.</p>
+            </div>
+
+            <div class="item-form-cat-rate">
+                <div class="form-group cat">
+                    <label for="category">Category</label>
+                    <select id="category" >
+                        <option value="cakes">Cakes</option>
+                        <option value="cupcakes">Cupcakes</option>
+                        <option value="sweet">Sweet</option>
+                        <option value="doughnuts">Doughnuts</option>
+                    </select>
+                </div>
+
+                <div class="form-group rate">
+                    <label for="price">Price</label>
+                    <input type="number" id="price" >
+                    <p id="price-error" class="error-message">Price cannot be negative.</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="image">Image Link</label>
+                <input type="url" id="image" >
+                <p id="image-error" class="error-message">Image URL cannot be empty or just spaces.</p>
+            </div>
+
+            <button type="submit" class="button">
+                <span class="button__text">Add Item</span>
+                <span class="button__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2"
+                        stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none"
+                        class="svg">
+                        <line y2="19" y1="5" x2="12" x1="12"></line>
+                        <line y2="12" y1="12" x2="19" x1="5"></line>
+                    </svg>
+                </span>
+            </button>
+        </form>
+    </div>
+
+    <script src="./js/admin-script.js"></script>
+</body>
+
+</html>

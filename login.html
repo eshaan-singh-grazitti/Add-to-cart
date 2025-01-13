@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Signup Form -->
+        <div id="signup" class="form-container active">
+            <h2>Sign Up </h2>
+            <h2>Create Account</h2>
+            <input type="text" id="signup-username" placeholder="Enter username" required>
+            <span class="error-field error-username">* Enter Username</span>
+            <div class="password-container">
+                <input type="password" id="signup-password" placeholder="Enter password" required>
+                <span class="toggle-password" onclick="togglePasswordVisibility('signup-password')">👁</span>
+            </div>
+            <span class="error-field error-password">* Enter Password</span>
+            <button onclick="signup()">Sign Up</button>
+            <p class="msg-text">Already have an account? <a href="#" onclick="toggleForm('login')">Login</a></p>
+            <span class="signup-success">Signup successful! Please log in.</span>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login" class="form-container">
+            <h2>Log In </h2>
+            <h2>Welcome Back</h2>
+            <input type="text" id="login-username" placeholder="Enter username" required>
+            <span class="usr-error">* Enter Valid Username</span>
+            <div class="password-container">
+                <input type="password" id="login-password" placeholder="Enter password" required>
+                <span class="toggle-password" onclick="togglePasswordVisibility('login-password')">👁</span>
+            </div>
+            <span class="pswrd-error">* Enter Valid Password</span>
+            <button onclick="login()">Login</button>
+            <p class="msg-text">Don't have an account? <a href="#" onclick="toggleForm('signup')">Sign Up</a></p>
+            <span class="success-login">
+                <p id="countdown" class="hidden"> login Success<br>Redirecting to admin page in <span id="counter">3</span> seconds...</p>
+            </span>
+        </div>
+    </div>
+
+    <script src="./js/login.js"></script>
+</body>
+
+</html>
